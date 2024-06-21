@@ -125,14 +125,15 @@ header .navbar ul li a:hover {
 /* navbar ends */
 
 /* hamburger icon starts*/
-#menu {
+#fa-times {
   font-size: 3rem;
   cursor: pointer;
   color: rgb(24, 2, 63);
   display: none;
 }
 @media (max-width: 768px) {
-  #menu {
+  #fa-times {
+display: block;
   }
   header .navbar {
     position: fixed;
@@ -175,6 +176,7 @@ header .navbar ul li a:hover {
   header .navbar.nav-toggle {
     right: 0;
   }
+ 
 }
 /* hamburger icon ends */
 
@@ -366,7 +368,7 @@ header .navbar ul li a:hover {
   height: auto;
   border-radius: 5%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-  mix-blend-mode: luminosity;
+  mix-blend-mode:luminosity ;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -1364,8 +1366,27 @@ form .button-area {
 }
 @media (max-width: 580px) {
   .widget-container{
+  
+   position: relative;
+    display: inline-block;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding-right: 30px;
   }
-
+.box-panel{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+    display: inline-block;
+   justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.flip-box {
+  margin-top: 30px;
+}
 }
 /* funadition start */
 .bg {
@@ -1414,7 +1435,8 @@ form .button-area {
   }
 }
 .acv{
-  background: linear-gradient(to right, #4568dc, #b06ab3);
+  background: white;
+  /* background: linear-gradient(to bottom, #a5a8b3, #4b124d); */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -1431,12 +1453,13 @@ form .button-area {
 
 .rainbow {
   
+  text-align: center;
 
-  background: linear-gradient(to right, #4568dc, #b06ab3);
+  background: linear-gradient(to right, #4568dc, #ffffff);
 	position: relative;
 	z-index: 0;
 	width: 400px;
-	height: 500px;
+	height: 550px;
 	border-radius: 10px;
 	overflow: hidden;
 	padding: 2rem;
@@ -1471,12 +1494,114 @@ form .button-area {
 		top: 6px;
 		width: calc(100% - 12px);
 		height: calc(100% - 12px);
-		background: rgb(214, 211, 211);
+		background: #003135;
 		border-radius: 5px;
+    
 	}
 }
 .rainbow h3{
-  
+  margin-left: auto;
+  margin-right: auto;
+  color: #d53e33;
+  text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
+}
+
+/* text anikmation */
+.container4 {
+  margin-top: 16px;
+  width: 9.25em;
+  height: 1.20em;
+  font-size: 2.8rem;
+  font-family: sans-serif;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container4 div {
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.upper4 {
+  top: 0;
+  height: 55%;
+  color: #fff;
+  overflow: hidden;
+  z-index: 3;
+  animation: moveUp 3s infinite;
+  background-color: #003135;
+}
+
+.lower4 {
+  bottom: 0;
+  height: 100%;
+  background: linear-gradient(180deg, #003135 52.5%, #fff 52.5%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  z-index: 1;
+  animation: moveDown 3s infinite;
+}
+
+.inside4 {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-40%);
+  text-align: center;
+  z-index: 2;
+  font-size: 1rem;
+  color: #dc143c;
+}
+
+@keyframes moveUp {
+  0%,
+  100% {
+    top: 0;
+  }
+  
+
+  50%,
+  70% {
+    top: -20px;
+  }
+}
+
+@keyframes moveDown {
+  0%,
+  100% {
+    top: 0;
+  }
+
+  50%,
+  70% {
+    top: 20px;
+  }
+}
+
+@media (max-width: 424px) {
+  .container4 {
+    font-size: 2.5rem;
+  }
+
+  .inside4 {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .container4 {
+    font-size: 2rem;
+  }
+
+  .inside4 {
+    font-size: 0.5rem;
+  }
 }

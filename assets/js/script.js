@@ -1,12 +1,12 @@
 $(document).ready(function () {
 
-    $('#menu').click(function () {
+    $('#fa-times').click(function () {
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
     });
 
     $(window).on('scroll load', function () {
-        $('#menu').removeClass('fa-times');
+        $('#fa-times').removeClass('fa-times');
         $('.navbar').removeClass('nav-toggle');
 
         if (window.scrollY > 60) {
@@ -249,3 +249,5 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
+
+// loding
